@@ -1,5 +1,6 @@
 
 
+import 'package:crypto_budget/screens/currencies_screen.dart';
 import 'package:crypto_font_icons/crypto_font_icons.dart';
 import 'package:flutter/material.dart';
 
@@ -83,7 +84,11 @@ class HomeScreen extends StatelessWidget {
               Expanded(
                 child: ListView.separated(
                     itemBuilder: (context, index) => ListTile(
-                      onTap: (){} ,
+                      onTap: (){
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) =>
+                                CurrenciesScreen(),));
+                      } ,
                       title: Column(
                         children: [
                           Row(
